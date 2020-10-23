@@ -8,7 +8,7 @@ Wow! Quite simply, I love the game.  Rocket League's major appeal to me is its c
 
 [![](http://img.youtube.com/vi/KNG7r1n6Jk8/0.jpg)](http://www.youtube.com/watch?v=KNG7r1n6Jk8 "Best Goal In RL History")
 
-Hastily writing the game off as merely "soccer but with cars having rocket engines on the back" does a disservice to the beautiful complexity that ermerges in higher brackets of play.  
+Hastily writing the game off as merely "soccer but with cars having rocket engines on the back" does a disservice to the beautiful complexity that emerges in higher brackets of play.  
 #
 ## Where will I get the data?
 The bulk of the data will come from a site named for the style of play where making contact with the ball becomes more import than controlled touches towards a teammate.  What can you do, ballchasing is life to some! [Ballchasing.com](https://ballchasing.com/) ([api](https://ballchasing.com/doc/api)) is home to over 14 million replay files, each one a treasure trove of both individual- and team-focused match statistics.
