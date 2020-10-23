@@ -3,7 +3,7 @@ Exploring significant relationships between the ball, boost, and best in the gam
 #
 #
 ## Why am I interested?
-Wow! Quite simply, I love the game.  Rocket League's major appeal to me is its core pillar of being easy to pick up while maintaining itself as a bonified eSport with an incredible skill ceiling.  Three years after playing my very first match, I am now nearing my 1000th hour.  Rocket League is my sport.  _This is Rocket League!_
+Wow! Quite simply, I love the game.  Rocket League's major appeal to me is its core pillar of being easy to pick up while maintaining itself as a bona fide eSport with an incredible skill ceiling.  Three years after playing my very first match, I am now nearing my 1000th hour.  Rocket League is my sport.  _This is Rocket League!_
 
 
 [![](http://img.youtube.com/vi/KNG7r1n6Jk8/0.jpg)](http://www.youtube.com/watch?v=KNG7r1n6Jk8 "Best Goal In RL History")
