@@ -4,7 +4,7 @@ Exploring significant relationships between the ball, boost, and best in the gam
 #
 ## Why am I interested?
 Wow! Quite simply, I love the game.  Rocket League's major appeal to me is its core pillar of being easy to pick up while maintaining itself as a bonified eSport with an incredible skill ceiling.  Three years after playing my very first match, I am now nearing my 1000th hour.  Rocket League is my sport.  _This is Rocket League!_
-<ul><iframe width="560" height="315" src="https://www.youtube.com/embed/KNG7r1n6Jk8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></ul>
+
 
 [![](http://img.youtube.com/vi/KNG7r1n6Jk8/0.jpg)](http://www.youtube.com/watch?v=KNG7r1n6Jk8 "Best Goal In RL History")
 
