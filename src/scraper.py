@@ -23,8 +23,10 @@ headers = {
 }
 
 data = {
-    'pro': True
+    'pro': True,
+    'count' : 3
 }
+
 endpoint = f"{api_base_url}"
 
 def ping_api():
@@ -33,7 +35,13 @@ def ping_api():
     '''
     return requests.get(api_base_url, headers=headers).status_code
 
+def get_replay_list(data):
+    endpoint = f"{api_base_url}replays"
+    return (requests.get(endpoint, headers=headers, data=data).json())
+
+
+
+
 if __name__ == '__main__':
-    #r = requests.get(endpoint, headers=headers)
-    #print(r.status_code)
-    print(ping_api())
+    print(f"Ping Response: {ping_api()}")
+    print(get_replay_list(data))
