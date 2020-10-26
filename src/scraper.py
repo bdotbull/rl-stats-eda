@@ -17,8 +17,12 @@ def get_replay_list(data):
     endpoint = f"{api_base_url}replays"
     return (requests.get(endpoint, headers=headers, data=data).json())
 
+def get_specific_replay():
+    pass
 
-# Variable Definitions
+# pipe specific replay to MongoDB
+
+# Variable Declaration
 api_base_url = 'https://ballchasing.com/api/'
 
 # Authorization token for ballchasing.com API
