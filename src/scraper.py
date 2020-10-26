@@ -6,29 +6,7 @@ Web Scraper for ballchasing.com using ballchasing API
 # Imports
 import requests
 
-# API Base Path
-api_base_url = 'https://ballchasing.com/api/'
-
-# Authorization token for ballchasing.com API
-token_file_path = '../creds/ballchasing_credentials.txt'
-with open(token_file_path, 'r') as tfp:
-    token = tfp.readlines()[0]
-
-# Data output path
-data_out_path = ''
-
-
-headers = {
-    'Authorization': token
-}
-
-data = {
-    'pro': True,
-    'count' : 3
-}
-
-endpoint = f"{api_base_url}"
-
+# Function Definitions
 def ping_api():
     '''
     Checks if API key is correct and ballchasing API is reachable
@@ -40,8 +18,32 @@ def get_replay_list(data):
     return (requests.get(endpoint, headers=headers, data=data).json())
 
 
+# Variable Definitions
+api_base_url = 'https://ballchasing.com/api/'
+
+# Authorization token for ballchasing.com API
+token_file_path = '../creds/ballchasing_credentials.txt'
+with open(token_file_path, 'r') as tfp:
+    token = tfp.readlines()[0]
+
+headers = {
+    'Authorization': token
+}
+
+endpoint = f"{api_base_url}"
+
+
+
+
 
 
 if __name__ == '__main__':
+    # kwargs for replay list test
+    data = {
+        'pro': True,
+        'count' : 3
+    }
+    
+    # Print Tests
     print(f"Ping Response: {ping_api()}")
     print(get_replay_list(data))
