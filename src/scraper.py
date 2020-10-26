@@ -25,10 +25,15 @@ headers = {
 data = {
     'pro': True
 }
-
-# initial ping
 endpoint = f"{api_base_url}"
 
+def ping_api():
+    '''
+    Checks if API key is correct and ballchasing API is reachable
+    '''
+    return requests.get(api_base_url, headers=headers).status_code
+
 if __name__ == '__main__':
-    r = requests.get(endpoint, headers=headers)
-    print(r.status_code)
+    #r = requests.get(endpoint, headers=headers)
+    #print(r.status_code)
+    print(ping_api())
