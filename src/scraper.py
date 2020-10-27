@@ -59,13 +59,19 @@ if __name__ == '__main__':
     # kwargs for replay list test
     data = {
         'pro': True,
-        'count' : 3
+        'count' : 200
     }
-    
-    # Print Tests
+
     print(f"Ping Response: {ping_api()}")
     
-    #print(get_replay_list(data))
+    ## MAIN
+    '''wrap whole thing in while loop until 10000 replays'''
+    # get list of replays using data->list as filter
+    get_replay_list(data)
+
+    # check if any replays in list are in collection already
+        # remove dupes from list
     
-    test_replay_id = '56889c3e-c420-45db-92fd-47ce2a3604b0'
-    print(get_specific_replay(test_replay_id))
+    # for replay in replay_list
+        # get_specific_replay
+        # add replay to mongoDB
