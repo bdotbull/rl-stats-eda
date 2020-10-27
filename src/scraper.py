@@ -67,7 +67,7 @@ if __name__ == '__main__':
     ## MAIN
     '''wrap whole thing in while loop until 10000 replays'''
     # get list of replays using data->list as filter
-    get_replay_list(data)
+    #get_replay_list(data)
 
     # check if any replays in list are in collection already
         # remove dupes from list
