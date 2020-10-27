@@ -19,10 +19,26 @@ def ping_api():
     return requests.get(api_base_url, headers=headers).status_code
 
 def get_replay_list(data):
+    """Retrieves a filtered list of replays based on provided parameters
+
+    Args:
+        data (list): Parameters to be passed as data to the URI endpoint
+
+    Returns:
+        JSON: JSON containing high level replay info
+    """
     endpoint = f"{api_base_url}replays"
     return requests.get(endpoint, headers=headers, data=data).json()
 
 def get_specific_replay(replay_id):
+    """Retrive details of given replay
+
+    Args:
+        replay_id (str): Unique "id" for a replay
+
+    Returns:
+        JSON: Detailed stats relating to the replay
+    """
     endpoint = f"{api_base_url}replays/{replay_id}"
     return requests.get(endpoint, headers=headers).json()
 
