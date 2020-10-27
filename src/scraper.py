@@ -39,22 +39,26 @@ def get_all_replays(collection, replay_id_list):
 
 
 def scrape(collection, data, sleep=0.0625, max_additions=1000):
-    '''wrap whole thing in while loop until 10000 replays'''
-    counter = max_additions / 50    # 50 replays with every call of get_replay_list
-    
+    # TODO: Docstrings
+    counter = max_additions   # 50 replays with every call of get_replay_list
+
     while counter:
-        # get list of replays using data->list as filter
+        # get list of replays using data->list as filter on fetch
         replay_list = get_replay_list(data)
     
         for i,rep_id in enumerate(replay_list["list"]):
             # TODO: check for dupes in collection, remove if necessary
             replay_to_mongo_collection(collection, 
                                 get_specific_replay(replay_list["list"][i]["id"]))
-            print(f'{i}    added {rep_id} to {collection}')
+            
+            counter -= 1
+            print(f'{i}  added {rep_id["id"]}')
             print(f'{counter} left to process')
-            time.sleep(sleep)
+            #time.sleep(sleep)   # this thing runs slow enough to stay under 16 calls/second
 
-        counter -= 1
+            # safety
+            if not counter:
+                break
 
 
 # Variable Declaration
@@ -82,4 +86,4 @@ if __name__ == '__main__':
 
     print(f"Ping Response: {ping_api()}")
     
-    #scrape(collection,data)
+    scrape(collection, data, max_additions=9000)
