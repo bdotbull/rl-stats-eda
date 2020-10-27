@@ -51,7 +51,7 @@ def scrape(collection, data, sleep=0.0625, max_additions=1000):
             replay_to_mongo_collection(collection, 
                                 get_specific_replay(replay_list["list"][i]["id"]))
             print(f'{i}    added {rep_id} to {collection}')
-            print({count} left to process)
+            print(f'{counter} left to process')
             time.sleep(sleep)
 
         counter -= 1
