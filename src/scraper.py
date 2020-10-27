@@ -17,10 +17,13 @@ def get_replay_list(data):
     endpoint = f"{api_base_url}replays"
     return (requests.get(endpoint, headers=headers, data=data).json())
 
-def get_specific_replay():
-    pass
+def get_specific_replay(replay_id):
+    
+    endpoint = f"{api_base_url}replays/{replay_id}"
 
 # pipe specific replay to MongoDB
+
+
 
 # Variable Declaration
 api_base_url = 'https://ballchasing.com/api/'
