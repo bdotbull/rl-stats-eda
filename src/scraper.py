@@ -27,11 +27,15 @@ def get_specific_replay(replay_id):
     return requests.get(endpoint, headers=headers).json()
 
 # pipe specific replay to MongoDB
-def replay_to_mongo(replay_json):
-    pass
+def replay_to_mongo_collection(collection, replay_json):
+    collection.insert_one(replay_json)
 
-def get_all_replays(replay_id_list):
-    pass
+def get_all_replays(collection, replay_id_list):
+    for rep in replay_id_list:
+        try:
+            replay_to_mongo_collection(collection, get_specific_replay(rep))
+        except DuplicateKeyError:
+            print (f'Error: Duplicate entry in {collection} with {rep}')
 
 
 # Variable Declaration
@@ -41,15 +45,14 @@ api_base_url = 'https://ballchasing.com/api/'
 token_file_path = '../creds/ballchasing_credentials.txt'
 with open(token_file_path, 'r') as tfp:
     token = tfp.readlines()[0]
+headers = { 'Authorization': token }
 
-headers = {
-    'Authorization': token
-}
+# Define MongoDB database and collection
+db_client = MongoClient('localhost', 27017)
+db = db_client['rocket_league']
+collection = db['rl_replays']
 
-# Define MongoDB database and table
-db_client = MongoClient()
-db = db_client['']
-table = db['']
+# when clean, new collection in rocket_league database
 
 
 if __name__ == '__main__':

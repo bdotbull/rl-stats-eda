@@ -130,3 +130,6 @@ dmypy.json
 
 # Credential Directory
 /creds/*
+
+# Data (too large)
+/data/*
