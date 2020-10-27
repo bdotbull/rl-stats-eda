@@ -75,4 +75,4 @@ if __name__ == '__main__':
 
     print(f"Ping Response: {ping_api()}")
     
-    #scrape()
+    scrape(collection,data)
