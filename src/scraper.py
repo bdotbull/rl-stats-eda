@@ -38,6 +38,18 @@ def get_all_replays(collection, replay_id_list):
             print (f'Error: Duplicate entry in {collection} with {rep}')
 
 
+def scrape(collection, data, sleep=0.0625, max_additions=5):
+    '''wrap whole thing in while loop until 10000 replays'''
+    # get list of replays using data->list as filter
+    replay_list = get_replay_list(data)
+    
+    for i,rep_id in enumerate(replay_list["list"]):
+        # TODO: check for dupes in collection, remove if necessary
+        replay_to_mongo_collection(collection, 
+                            get_specific_replay(replay_list["list"][i]["id"]))
+        time.sleep(sleep)
+
+
 # Variable Declaration
 api_base_url = 'https://ballchasing.com/api/'
 
@@ -59,19 +71,8 @@ if __name__ == '__main__':
     # kwargs for replay list test
     data = {
         'pro': True,
-        'count' : 200
     }
 
     print(f"Ping Response: {ping_api()}")
     
-    ## MAIN
-    '''wrap whole thing in while loop until 10000 replays'''
-    # get list of replays using data->list as filter
-    #get_replay_list(data)
-
-    # check if any replays in list are in collection already
-        # remove dupes from list
-    
-    # for replay in replay_list
-        # get_specific_replay
-        # add replay to mongoDB
+    #scrape()
