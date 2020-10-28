@@ -63,6 +63,7 @@ def scrape(collection, data, sleep=0.0625, max_additions=1000):
         replay_list = get_replay_list(data)
     
         for i,rep_id in enumerate(replay_list["list"]):
+            # TODO: check replay data for id, 3 blue players, and 3 orange players before adding to DB
             # TODO: check for dupes in collection, remove if necessary
             replay_to_mongo_collection(collection, 
                                 get_specific_replay(replay_list["list"][i]["id"]))
@@ -98,7 +99,7 @@ if __name__ == '__main__':
     # kwargs for replay list test
     data = {
         'pro': True,
-        'playlist': 'ranked-standard'
+        'playlist': ['ranked-standard']
     }
 
     print(f"Ping Response: {ping_api()}")
