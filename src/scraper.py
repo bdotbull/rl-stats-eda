@@ -103,4 +103,4 @@ if __name__ == '__main__':
 
     print(f"Ping Response: {ping_api()}")
     
-    scrape(collection, data, max_additions=9000)
+    scrape(collection, data, max_additions=10000)
