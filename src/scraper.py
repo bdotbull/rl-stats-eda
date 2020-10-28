@@ -98,6 +98,7 @@ if __name__ == '__main__':
     # kwargs for replay list test
     data = {
         'pro': True,
+        'playlist': 'ranked-standard'
     }
 
     print(f"Ping Response: {ping_api()}")
