@@ -65,6 +65,7 @@ def scrape(collection, data, sleep=0.0625, max_additions=1000):
         for i,rep_id in enumerate(replay_list["list"]):
             # TODO: check replay data for id, 3 blue players, and 3 orange players before adding to DB
             # TODO: check for dupes in collection, remove if necessary
+            # TODO: FIX: object passed to get_specific_replay does not have "id" key
             replay_to_mongo_collection(collection, 
                                 get_specific_replay(replay_list["list"][i]["id"]))
             
