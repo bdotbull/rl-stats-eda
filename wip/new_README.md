@@ -11,7 +11,9 @@ Wow! Quite simply, I love the game.  Rocket League's major appeal to me is its c
 Hastily writing the game off as merely "soccer but with cars having rocket engines on the back" does a disservice to the beautiful complexity that emerges in higher brackets of play.  
 #
 ## What is a demo?
-In Rocket League, when a vehicle passes a high speed threshold, the vehicle is flagged as travelling at "supersonic" speed.  When a vehicle traveling supersonic hits another vehicle, the slower vehicle is "demolished" or "demo'd".  When a 
+In Rocket League, when a vehicle passes a high speed threshold, the vehicle is flagged as travelling at "supersonic" speed.  When a vehicle traveling supersonic hits another vehicle, the slower vehicle is "demolished" or "demo'd".  The demolished vehicle is blown up in a blinding cloud of smoke and removed from the game for 3 seconds before spawning in their defensive third, free to resume play.
+
+This mechanic is a point of contention due to it being an easily executed way to remove a player's ability to influence the game for a set time, though it is also argued as a high-risk, high-reward maneuver.
 
 
 #
