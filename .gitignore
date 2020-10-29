@@ -133,3 +133,6 @@ dmypy.json
 
 # Data (too large)
 /data/*
+
+# Temporary directory
+/tmp_dir/*
