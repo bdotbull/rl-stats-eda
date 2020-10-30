@@ -40,7 +40,7 @@ When cleaned, the number of applicable records is over 5,800.
 A Welch's t-test was employed due to the high variance in the group with the top 25% of demos compared to the group with the bottom 25% of demos.
 #
 ## Results
-
+**More demos does not directly contribute to more goals.** Therefore, one may safely reject the Null Hypothesis. 
 #
 ## Future Steps
 ###
