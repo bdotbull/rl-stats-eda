@@ -20,9 +20,9 @@ Scoring goals leads to wins. If there is a mechanic players can use to score mor
 * The players with the top 25% of inflicted demolitions
 * The players with the bottom 25% of inflicted demolitions
 
-_H0: The mean number of goals scored by players with the top 25% of demos is more than the mean number of goals scored by players with the bottom 25% of demos._
+_H0: The mean number of goals scored by players with the top 25% of demos is the same as the mean number of goals scored by players with the bottom 25% of demos._
 
-_Ha: The mean number of goals scored by players with the bottom 25% of demos is more than the mean number of goals scored by players with the top 25% of demos._
+_Ha: The mean number of goals scored by players with the bottom 25% of demos is not the same as the mean number of goals scored by players with the top 25% of demos._
 #
 ## Workflow and Tech Stack
 ### Python 3 and MongoDB
@@ -40,7 +40,7 @@ When cleaned, the number of applicable records is over 5,800.
 A Welch's t-test was employed due to the high variance in the group with the top 25% of demos compared to the group with the bottom 25% of demos.
 #
 ## Results
-**More demos does not directly contribute to more goals.** Therefore, one may safely reject the Null Hypothesis. 
+**More demos does not directly contribute to more goals.** Therefore, we fail to reject the Null Hypothesis. 
 #
 ## Future Steps
 ###
