@@ -17,20 +17,30 @@ This mechanic is a point of contention due to it being an easily executed way to
 #
 ## Hypothesis
 Scoring goals leads to wins. If there is a mechanic players can use to score more goals, it would at least be used at the highest levels. Professional players do not focus on demos more than any other mechanic. Therefore, the hypothesis is that demos will not directly contribute to scoring a goal. To test the hypothesis, the number of goals will be considered between two groups:
-* The players with the top 25% of demos
-* The players with the bottom 25% of demos
+* The players with the top 25% of inflicted demolitions
+* The players with the bottom 25% of inflicted demolitions
 
-H0: The mean number of goals scored by players with the top 25% of demos is more than the mean number of goals scored by players with the bottom 25% of demos.
+_H0: The mean number of goals scored by players with the top 25% of demos is more than the mean number of goals scored by players with the bottom 25% of demos._
 
-Ha: The mean number of goals scored by players with the bottom 25% of demos is more than the mean number of goals scored by players with the top 25% of demos.
+_Ha: The mean number of goals scored by players with the bottom 25% of demos is more than the mean number of goals scored by players with the top 25% of demos._
 #
 ## Workflow and Tech Stack
+### Python 3 and MongoDB
+##### Numpy, Pandas, Matplotlib, Seaborn, SciPy, PyMongo 
 #
-## Data & Results
+## Data
+[Ballchasing.com](https://ballchasing.com/) ([api](https://ballchasing.com/doc/api)) is home to over 14 million replay files, each one a treasure trove of both individualized and team-focused match statistics. Using the API, a scraper was built to retrieve replay files according to a filter. To be used in the test, replays must match the following criteria:
+* replay files must have complete information (no missing data such as player name or match id)
+* games must be from the Standard Ranked playlist (3v3, Soccar, Online w/Matchmaking)
+* games must have at least 1 professional player
+
+When cleaned, the number of applicable records is over 5,800.
 #
 ## Stats Test
+A Welch's t-test was employed due to the high variance in the group with the top 25% of demos compared to the group with the bottom 25% of demos.
 #
 ## Results
+
 #
 ## Future Steps
 ###
